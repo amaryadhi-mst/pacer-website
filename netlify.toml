@@ -1,0 +1,38 @@
+[build]
+  command = "pnpm build"
+  publish = "dist/public"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22.13.0"
+  NODE_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[context.production]
+  command = "pnpm build"
+  publish = "dist/public"
+
+[context.deploy-preview]
+  command = "pnpm build"
+  publish = "dist/public"
+
+[context.branch-deploy]
+  command = "pnpm build"
+  publish = "dist/public"
