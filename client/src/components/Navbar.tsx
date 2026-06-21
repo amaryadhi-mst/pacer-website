@@ -39,11 +39,11 @@ function NavDropdown({ label, groups, icon }: { label: string; groups: DropdownG
     <div ref={ref} className="relative">
       <button
         className="flex items-center gap-1 text-sm font-medium transition-colors px-3 py-2 rounded-md"
-        style={{ color: "oklch(0.85 0.02 250)" }}
+        style={{ color: "#374151" }}
         onClick={() => setOpen(!open)}
         onMouseEnter={() => setOpen(true)}
-        onMouseOver={e => (e.currentTarget as HTMLButtonElement).style.color = "oklch(0.99 0.002 250)"}
-        onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.color = "oklch(0.85 0.02 250)"}
+        onMouseOver={e => (e.currentTarget as HTMLButtonElement).style.color = "#1E40AF"}
+        onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.color = "#374151"}
       >
         {icon}
         {label}
@@ -57,17 +57,17 @@ function NavDropdown({ label, groups, icon }: { label: string; groups: DropdownG
           {groups.map((group, gi) => (
             <div key={gi}>
               {group.title && (
-                <div className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "oklch(0.75 0.16 55 / 0.8)", borderBottom: "1px solid oklch(1 0 0 / 0.05)" }}>
+                <div className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "#1E40AF", borderBottom: "1px solid rgba(37,99,235,0.10)" }}>
                   {group.title}
                 </div>
               )}
               {group.items.map((item, ii) => (
                 <Link key={ii} href={item.href} className="dropdown-item" onClick={() => setOpen(false)}>
-                  {item.icon && <span style={{ color: "oklch(0.75 0.16 55 / 0.8)" }}>{item.icon}</span>}
+                  {item.icon && <span style={{ color: "#2563EB" }}>{item.icon}</span>}
                   <span>{item.label}</span>
                 </Link>
               ))}
-              {gi < groups.length - 1 && <hr style={{ borderColor: "oklch(1 0 0 / 0.05)", margin: "4px 0" }} />}
+              {gi < groups.length - 1 && <hr style={{ borderColor: "rgba(59,130,246,0.10)", margin: "4px 0" }} />}
             </div>
           ))}
         </div>
@@ -161,7 +161,7 @@ export default function Navbar() {
             <Link
               href="/"
               className="text-sm font-medium px-3 py-2 rounded-md transition-colors"
-              style={{ color: location === "/" ? "oklch(0.75 0.16 55)" : "oklch(0.85 0.02 250)" }}
+              style={{ color: location === "/" ? "#1E40AF" : "#374151", fontWeight: location === "/" ? 600 : 500 }}
             >
               Home
             </Link>
@@ -179,23 +179,23 @@ export default function Navbar() {
                 <Link
                   href="/dashboard"
                   className="flex items-center gap-2 text-sm font-medium transition-colors px-3 py-2 rounded-md"
-                  style={{ color: "oklch(0.85 0.02 250)" }}
+                  style={{ color: "#374151" }}
                 >
                   <LayoutDashboard size={15} />
                   Dashboard
                 </Link>
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-md" style={{ background: "oklch(1 0 0 / 0.05)", border: "1px solid oklch(1 0 0 / 0.10)" }}>
-                  <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style={{ background: "oklch(0.75 0.16 55 / 0.20)", border: "1px solid oklch(0.75 0.16 55 / 0.40)", color: "oklch(0.75 0.16 55)" }}>
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-md" style={{ background: "rgba(37,99,235,0.06)", border: "1px solid rgba(37,99,235,0.15)" }}>
+                  <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style={{ background: "rgba(245,158,11,0.15)", border: "1px solid rgba(245,158,11,0.40)", color: "#92400E" }}>
                     {(user?.name ?? "U").charAt(0).toUpperCase()}
                   </div>
-                  <span className="text-sm max-w-[120px] truncate" style={{ color: "oklch(0.85 0.02 250)" }}>{user?.name ?? "User"}</span>
+                  <span className="text-sm max-w-[120px] truncate" style={{ color: "#374151" }}>{user?.name ?? "User"}</span>
                 </div>
                 <button
                   onClick={() => logoutMutation.mutate()}
                   className="flex items-center gap-1 text-sm transition-colors px-2 py-2"
-                  style={{ color: "oklch(0.60 0.02 250)" }}
-                  onMouseOver={e => (e.currentTarget as HTMLButtonElement).style.color = "oklch(0.55 0.22 25)"}
-                  onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.color = "oklch(0.60 0.02 250)"}
+                  style={{ color: "#94A3B8" }}
+                  onMouseOver={e => (e.currentTarget as HTMLButtonElement).style.color = "#EF4444"}
+                  onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.color = "#94A3B8"}
                 >
                   <LogOut size={14} />
                 </button>
@@ -210,7 +210,7 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             className="lg:hidden p-2 transition-colors"
-            style={{ color: "oklch(0.85 0.02 250)" }}
+            style={{ color: "#374151" }}
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -220,7 +220,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden py-4" style={{ borderTop: "1px solid oklch(1 0 0 / 0.08)", background: "oklch(0.22 0.07 250)" }}>
+        <div className="lg:hidden py-4" style={{ borderTop: "1px solid rgba(59,130,246,0.12)", background: "#FFFFFF" }}>
           <div className="container space-y-1">
             <MobileLink href="/" label="Home" onClick={() => setMobileOpen(false)} />
             <MobileSection label="Services">
@@ -253,14 +253,14 @@ export default function Navbar() {
               <MobileLink href="/about/quality-policy" label="Quality Policy" onClick={() => setMobileOpen(false)} sub />
               <MobileLink href="/about/contact" label="Contact" onClick={() => setMobileOpen(false)} sub />
             </MobileSection>
-            <div className="pt-3" style={{ borderTop: "1px solid oklch(1 0 0 / 0.08)" }}>
+            <div className="pt-3" style={{ borderTop: "1px solid rgba(59,130,246,0.10)" }}>
               {isAuthenticated ? (
                 <div className="space-y-1">
                   <MobileLink href="/dashboard" label="My Dashboard" onClick={() => setMobileOpen(false)} />
                   <button
                     onClick={() => { logoutMutation.mutate(); setMobileOpen(false); }}
                     className="w-full text-left px-3 py-2 text-sm rounded-md"
-                    style={{ color: "oklch(0.55 0.22 25)" }}
+                    style={{ color: "#EF4444" }}
                   >
                     Logout
                   </button>
@@ -283,7 +283,7 @@ function MobileLink({ href, label, onClick, sub }: { href: string; label: string
     <Link
       href={href}
       className="block px-3 py-2 text-sm rounded-md transition-colors"
-      style={{ color: sub ? "oklch(0.65 0.02 250)" : "oklch(0.85 0.02 250)", paddingLeft: sub ? "1.5rem" : undefined }}
+      style={{ color: sub ? "#6B7280" : "#374151", paddingLeft: sub ? "1.5rem" : undefined }}
       onClick={onClick}
     >
       {label}
@@ -297,7 +297,7 @@ function MobileSection({ label, children }: { label: string; children: React.Rea
     <div>
       <button
         className="w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md"
-        style={{ color: "oklch(0.85 0.02 250)" }}
+        style={{ color: "#374151" }}
         onClick={() => setOpen(!open)}
       >
         {label}

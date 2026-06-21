@@ -33,17 +33,34 @@ const supportLinks = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: "linear-gradient(135deg, oklch(0.20 0.09 250) 0%, oklch(0.16 0.07 255) 100%)", borderTop: "1px solid oklch(0.40 0.06 250 / 0.4)" }}>
+    <footer style={{
+      background: "linear-gradient(135deg, #0F2557 0%, #1E3A8A 40%, #1E40AF 100%)",
+      borderTop: "3px solid rgba(245,158,11,0.50)"
+    }}>
+      {/* Top accent bar */}
+      <div style={{ height: "3px", background: "linear-gradient(90deg, #F59E0B, #FBBF24, #F59E0B)", opacity: 0.9 }} />
+
       <div className="container py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
-              <img src={LOGO_URL} alt="PACER" className="h-10 w-auto" />
+              <img src={LOGO_URL} alt="PACER" className="h-10 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
             </Link>
-            <p className="text-sm leading-relaxed mb-5 max-w-xs" style={{ color: "oklch(0.75 0.02 250)" }}>
+            <p className="text-sm leading-relaxed mb-5 max-w-xs" style={{ color: "rgba(255,255,255,0.70)" }}>
               PT. Sertifikasi Karir Profesional (PACER) — Lembaga Sertifikasi Profesi berbasis ISO/IEC 17024 yang terakreditasi KAN.
             </p>
+            {/* Accreditation badge */}
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: "0.5rem",
+              padding: "0.4rem 0.9rem", borderRadius: "8px",
+              background: "rgba(245,158,11,0.15)", border: "1px solid rgba(245,158,11,0.35)",
+              marginBottom: "1.25rem",
+            }}>
+              <span style={{ color: "#FDE68A", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.06em" }}>
+                KAN TERAKREDITASI · ISO/IEC 17024
+              </span>
+            </div>
             <div className="flex gap-3">
               {[
                 { icon: <Facebook size={16} />, href: "#", label: "Facebook" },
@@ -56,9 +73,9 @@ export default function Footer() {
                   href={s.href}
                   aria-label={s.label}
                   className="w-8 h-8 rounded-md flex items-center justify-center transition-colors"
-                  style={{ background: "oklch(1 0 0 / 0.05)", border: "1px solid oklch(1 0 0 / 0.10)", color: "oklch(0.65 0.02 250)" }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "oklch(0.75 0.16 55)"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "oklch(0.75 0.16 55 / 0.4)"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "oklch(0.65 0.02 250)"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "oklch(1 0 0 / 0.10)"; }}
+                  style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.60)" }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#FDE68A"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(245,158,11,0.50)"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(245,158,11,0.12)"; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.60)"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.15)"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.08)"; }}
                 >
                   {s.icon}
                 </a>
@@ -68,16 +85,16 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "oklch(0.75 0.16 55)" }}>Services</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "#FDE68A" }}>Services</h4>
             <ul className="space-y-2">
               {serviceLinks.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
                     className="text-sm transition-colors"
-                    style={{ color: "oklch(0.65 0.02 250)" }}
-                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "oklch(0.95 0.005 250)"}
-                    onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "oklch(0.65 0.02 250)"}
+                    style={{ color: "rgba(255,255,255,0.60)" }}
+                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#FFFFFF"}
+                    onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.60)"}
                   >
                     {l.label}
                   </Link>
@@ -88,16 +105,16 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "oklch(0.75 0.16 55)" }}>Company</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "#FDE68A" }}>Company</h4>
             <ul className="space-y-2">
               {companyLinks.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
                     className="text-sm transition-colors"
-                    style={{ color: "oklch(0.65 0.02 250)" }}
-                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "oklch(0.95 0.005 250)"}
-                    onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "oklch(0.65 0.02 250)"}
+                    style={{ color: "rgba(255,255,255,0.60)" }}
+                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#FFFFFF"}
+                    onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.60)"}
                   >
                     {l.label}
                   </Link>
@@ -108,31 +125,37 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "oklch(0.75 0.16 55)" }}>Contact</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "#FDE68A" }}>Contact</h4>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2.5 text-sm" style={{ color: "oklch(0.65 0.02 250)" }}>
-                <MapPin size={14} className="mt-0.5 shrink-0" style={{ color: "oklch(0.75 0.16 55)" }} />
+              <li className="flex items-start gap-2.5 text-sm" style={{ color: "rgba(255,255,255,0.65)" }}>
+                <MapPin size={14} className="mt-0.5 shrink-0" style={{ color: "#FDE68A" }} />
                 <span>Jl. Gereja No. 9, Bogor</span>
               </li>
-              <li className="flex items-center gap-2.5 text-sm" style={{ color: "oklch(0.65 0.02 250)" }}>
-                <Phone size={14} className="shrink-0" style={{ color: "oklch(0.75 0.16 55)" }} />
-                <a href="tel:025183404500" className="transition-colors hover:text-white">0251-8340450</a>
+              <li className="flex items-center gap-2.5 text-sm" style={{ color: "rgba(255,255,255,0.65)" }}>
+                <Phone size={14} className="shrink-0" style={{ color: "#FDE68A" }} />
+                <a href="tel:025183404500" style={{ color: "rgba(255,255,255,0.65)" }}
+                  onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#FFFFFF"}
+                  onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.65)"}
+                >0251-8340450</a>
               </li>
-              <li className="flex items-center gap-2.5 text-sm" style={{ color: "oklch(0.65 0.02 250)" }}>
-                <Mail size={14} className="shrink-0" style={{ color: "oklch(0.75 0.16 55)" }} />
-                <a href="mailto:info@pacer.co.id" className="transition-colors hover:text-white">info@pacer.co.id</a>
+              <li className="flex items-center gap-2.5 text-sm" style={{ color: "rgba(255,255,255,0.65)" }}>
+                <Mail size={14} className="shrink-0" style={{ color: "#FDE68A" }} />
+                <a href="mailto:info@pacer.co.id" style={{ color: "rgba(255,255,255,0.65)" }}
+                  onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#FFFFFF"}
+                  onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.65)"}
+                >info@pacer.co.id</a>
               </li>
             </ul>
             <div className="mt-5 space-y-2">
-              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "oklch(0.75 0.16 55)" }}>Support</h4>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#FDE68A" }}>Support</h4>
               {supportLinks.map((l) => (
                 <div key={l.href}>
                   <Link
                     href={l.href}
                     className="text-sm transition-colors"
-                    style={{ color: "oklch(0.65 0.02 250)" }}
-                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "oklch(0.95 0.005 250)"}
-                    onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "oklch(0.65 0.02 250)"}
+                    style={{ color: "rgba(255,255,255,0.60)" }}
+                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#FFFFFF"}
+                    onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.60)"}
                   >
                     {l.label}
                   </Link>
@@ -142,9 +165,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="gold-line-full mt-10 mb-6" />
+        <div style={{ width: "100%", height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent)", margin: "2.5rem 0 1.5rem" }} />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs" style={{ color: "oklch(0.50 0.02 250)" }}>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs" style={{ color: "rgba(255,255,255,0.40)" }}>
           <p>© {new Date().getFullYear()} PT. Sertifikasi Karir Profesional (PACER). All rights reserved.</p>
           <div className="flex gap-4">
             <span>Terakreditasi KAN — ISO/IEC 17024</span>

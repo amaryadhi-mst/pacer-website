@@ -54,20 +54,22 @@ export default function ComplaintsPage() {
     in_progress: "Dalam Proses", resolved: "Selesai", closed: "Ditutup",
   };
 
+  const labelStyle = { display: "block", color: "#374151", fontSize: "0.875rem", fontWeight: 500, marginBottom: "0.5rem" };
+
   if (submitted) {
     return (
-      <div className="silver-bg min-h-screen flex items-center justify-center">
-        <div className="container max-w-lg">
-          <div className="silver-card p-10 text-center">
-            <CheckCircle size={48} className="text-green-400 mx-auto mb-4" />
-            <h2 className="text-2xl font-black text-white mb-3" style={{ fontFamily: "Montserrat, sans-serif" }}>Pengaduan Berhasil Dikirim</h2>
-            <p className="text-white/50 mb-6">Pengaduan Anda telah kami terima dan akan ditindaklanjuti dalam 5 hari kerja.</p>
-            <div className="bg-yellow-400/10 border border-yellow-400/30 rounded-xl p-4 mb-6">
-              <p className="text-white/50 text-sm mb-1">ID Pengaduan Anda:</p>
-              <p className="text-yellow-400 text-2xl font-black" style={{ fontFamily: "Montserrat, sans-serif" }}>{submitted!.complaintId}</p>
+      <div style={{ background: "#F8FAFF", minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div className="container" style={{ maxWidth: "480px" }}>
+          <div className="silver-card" style={{ padding: "3rem", textAlign: "center" }}>
+            <CheckCircle size={48} style={{ color: "#10B981", margin: "0 auto 1rem" }} />
+            <h2 style={{ fontFamily: "Montserrat, sans-serif", fontSize: "1.5rem", fontWeight: 900, color: "#0F2557", marginBottom: "0.75rem" }}>Pengaduan Berhasil Dikirim</h2>
+            <p style={{ color: "#64748B", marginBottom: "1.5rem", lineHeight: 1.6 }}>Pengaduan Anda telah kami terima dan akan ditindaklanjuti dalam 5 hari kerja.</p>
+            <div style={{ background: "#FFFBEB", border: "1px solid rgba(245,158,11,0.30)", borderRadius: "0.75rem", padding: "1rem", marginBottom: "1.5rem" }}>
+              <p style={{ color: "#64748B", fontSize: "0.82rem", marginBottom: "0.35rem" }}>ID Pengaduan Anda:</p>
+              <p style={{ fontFamily: "Montserrat, sans-serif", fontSize: "1.5rem", fontWeight: 900, color: "#92400E" }}>{submitted!.complaintId}</p>
             </div>
-            <p className="text-white/40 text-sm mb-6">Simpan ID ini untuk melacak status pengaduan Anda.</p>
-            <button onClick={() => setSubmitted(null)} className="btn-outline">Kembali</button>
+            <p style={{ color: "#94A3B8", fontSize: "0.82rem", marginBottom: "1.5rem" }}>Simpan ID ini untuk melacak status pengaduan Anda.</p>
+            <button onClick={() => setSubmitted(null)} className="btn-outline-navy">Kembali</button>
           </div>
         </div>
       </div>
@@ -75,80 +77,122 @@ export default function ComplaintsPage() {
   }
 
   return (
-    <div className="silver-bg min-h-screen">
-      <div className="page-header silver-bg">
+    <div style={{ background: "#F8FAFF", minHeight: "100vh" }}>
+      {/* Header */}
+      <div className="page-header">
         <div className="container">
-          <div className="gold-badge mb-4"><MessageSquare size={12} />Complaints</div>
-          <h1 className="text-5xl font-black text-[#0F2557] mb-3" style={{ fontFamily: "Montserrat, sans-serif" }}>Pengaduan (Complaints)</h1>
-          <p className="text-white/50 max-w-3xl leading-relaxed">PACER berkomitmen menangani setiap pengaduan dengan serius, objektif, dan transparan. Formulir ini dapat diakses tanpa login.</p>
+          <div style={{
+            display: "inline-flex", alignItems: "center", gap: "0.4rem",
+            padding: "0.3rem 0.85rem", borderRadius: "99px",
+            background: "rgba(245,158,11,0.15)", border: "1px solid rgba(245,158,11,0.40)",
+            color: "#FDE68A", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.08em",
+            textTransform: "uppercase", marginBottom: "1.25rem",
+          }}>
+            <MessageSquare size={12} /> Complaints
+          </div>
+          <h1 style={{ fontFamily: "Montserrat, sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 900, color: "white", marginBottom: "0.75rem", letterSpacing: "-0.03em" }}>
+            Pengaduan (Complaints)
+          </h1>
+          <p style={{ color: "rgba(255,255,255,0.72)", maxWidth: "680px", lineHeight: 1.7 }}>
+            PACER berkomitmen menangani setiap pengaduan dengan serius, objektif, dan transparan. Formulir ini dapat diakses tanpa login.
+          </p>
         </div>
       </div>
-      <div className="container py-16">
-        <div className="grid lg:grid-cols-3 gap-8">
+
+      <div className="container" style={{ paddingTop: "4rem", paddingBottom: "5rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "2rem" }}>
+
           {/* Info Panel */}
-          <div className="space-y-6">
-            <div className="silver-card p-6">
-              <div className="gold-badge mb-4">Prosedur</div>
-              <div className="space-y-0">
+          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+            <div className="silver-card" style={{ padding: "1.5rem" }}>
+              <div style={{
+                display: "inline-flex", alignItems: "center", gap: "0.4rem",
+                padding: "0.3rem 0.85rem", borderRadius: "99px",
+                background: "rgba(245,158,11,0.10)", border: "1px solid rgba(245,158,11,0.30)",
+                color: "#92400E", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.08em",
+                textTransform: "uppercase", marginBottom: "1.25rem",
+              }}>
+                Prosedur
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
                 {["Isi formulir dengan lengkap dan jelas", "Sertakan informasi pendukung yang relevan", "Simpan ID pengaduan yang diberikan", "Ditinjau dalam 5 hari kerja", "Dihubungi via email yang didaftarkan", "Penyelesaian maksimal 30 hari kerja"].map((step, i) => (
-                  <div key={i} className="timeline-item">
-                    <div className="timeline-dot" />
-                    <p className="text-white/50 text-sm pt-0.5">{step}</p>
+                  <div key={i} style={{ display: "flex", gap: "0.875rem", paddingBottom: i < 5 ? "1rem" : "0", position: "relative" }}>
+                    {i < 5 && <div style={{ position: "absolute", left: "0.75rem", top: "1.5rem", bottom: 0, width: "2px", background: "rgba(37,99,235,0.15)" }} />}
+                    <div style={{
+                      width: "1.5rem", height: "1.5rem", borderRadius: "50%",
+                      background: "#EFF6FF", border: "2px solid rgba(37,99,235,0.30)",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      color: "#1E40AF", fontSize: "0.65rem", fontWeight: 800, flexShrink: 0, zIndex: 1,
+                    }}>{i + 1}</div>
+                    <p style={{ color: "#475569", fontSize: "0.82rem", paddingTop: "0.1rem", lineHeight: 1.5 }}>{step}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="silver-card p-6">
-              <div className="gold-badge mb-4">Lacak Pengaduan</div>
-              <p className="text-white/50 text-sm mb-4">Masukkan ID pengaduan untuk melihat status terkini.</p>
-              <div className="space-y-3">
-                <input type="text" className="form-input" placeholder="PAC-COMP-YYYY-MM-XXXXX" value={trackId} onChange={(e) => setTrackId(e.target.value.toUpperCase())} />
-                <button onClick={handleTrack} className="btn-outline w-full justify-center text-sm"><Search size={14} />Lacak Status</button>
+
+            <div className="silver-card" style={{ padding: "1.5rem" }}>
+              <div style={{
+                display: "inline-flex", alignItems: "center", gap: "0.4rem",
+                padding: "0.3rem 0.85rem", borderRadius: "99px",
+                background: "#EFF6FF", border: "1px solid rgba(37,99,235,0.20)",
+                color: "#1E40AF", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.08em",
+                textTransform: "uppercase", marginBottom: "1rem",
+              }}>
+                Lacak Pengaduan
               </div>
-              {trackResult !== undefined && trackResult !== null && (
-                <div className="mt-4 p-4 bg-white/5 rounded-lg border border-white/10">
-                  <p className="text-white/40 text-xs mb-2">Status:</p>
-                  <span className={`status-badge status-${trackResult.status}`}>{statusLabels[trackResult.status] || trackResult.status}</span>
-                  {trackResult.adminNotes && <p className="text-white/50 text-xs mt-2">{trackResult.adminNotes}</p>}
-                </div>
-              )}
-              {trackResult === null && <p className="text-red-400 text-xs mt-3">ID tidak ditemukan.</p>}
+              <p style={{ color: "#64748B", fontSize: "0.82rem", marginBottom: "1rem", lineHeight: 1.5 }}>Masukkan ID pengaduan untuk melihat status terkini.</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                <input type="text" className="form-input" placeholder="PAC-COMP-YYYY-MM-XXXXX" value={trackId} onChange={(e) => setTrackId(e.target.value.toUpperCase())} />
+                <button onClick={handleTrack} className="btn-outline-navy" style={{ width: "100%", justifyContent: "center", fontSize: "0.875rem" }}>
+                  <Search size={14} /> Lacak Status
+                </button>
+              </div>
+              {trackResult === null && <p style={{ color: "#EF4444", fontSize: "0.78rem", marginTop: "0.75rem" }}>ID tidak ditemukan.</p>}
             </div>
-            <div className="silver-card p-6">
-              <AlertCircle size={20} className="text-yellow-400 mb-3" />
-              <h3 className="text-white font-bold mb-2">Informasi Penting</h3>
-              <p className="text-white/50 text-sm leading-relaxed">Pengaduan yang bersifat palsu dapat dikenakan sanksi. Pastikan informasi yang disampaikan benar dan dapat dipertanggungjawabkan.</p>
+
+            <div className="silver-card" style={{ padding: "1.5rem" }}>
+              <AlertCircle size={20} style={{ color: "#F59E0B", marginBottom: "0.75rem" }} />
+              <h3 style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 700, color: "#0F2557", marginBottom: "0.5rem" }}>Informasi Penting</h3>
+              <p style={{ color: "#64748B", fontSize: "0.82rem", lineHeight: 1.6 }}>Pengaduan yang bersifat palsu dapat dikenakan sanksi. Pastikan informasi yang disampaikan benar dan dapat dipertanggungjawabkan.</p>
             </div>
           </div>
 
           {/* Form */}
-          <div className="lg:col-span-2">
-            <div className="silver-card p-8">
-              <div className="gold-badge mb-6">Formulir Pengaduan</div>
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <div className="silver-card" style={{ padding: "2rem" }}>
+              <div style={{
+                display: "inline-flex", alignItems: "center", gap: "0.4rem",
+                padding: "0.3rem 0.85rem", borderRadius: "99px",
+                background: "rgba(245,158,11,0.10)", border: "1px solid rgba(245,158,11,0.30)",
+                color: "#92400E", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.08em",
+                textTransform: "uppercase", marginBottom: "1.5rem",
+              }}>
+                Formulir Pengaduan
+              </div>
+              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
                   <div>
-                    <label className="block text-white/60 text-sm mb-2">Nama Lengkap <span className="text-red-400">*</span></label>
+                    <label style={labelStyle}>Nama Lengkap <span style={{ color: "#EF4444" }}>*</span></label>
                     <input type="text" className="form-input" placeholder="Nama Anda" value={form.fullName} onChange={(e) => setForm({ ...form, fullName: e.target.value })} required />
                   </div>
                   <div>
-                    <label className="block text-white/60 text-sm mb-2">Email <span className="text-red-400">*</span></label>
+                    <label style={labelStyle}>Email <span style={{ color: "#EF4444" }}>*</span></label>
                     <input type="email" className="form-input" placeholder="email@example.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
                   </div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
                   <div>
-                    <label className="block text-white/60 text-sm mb-2">No. Telepon</label>
+                    <label style={labelStyle}>No. Telepon</label>
                     <input type="tel" className="form-input" placeholder="08xxxxxxxxxx" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
                   </div>
                   <div>
-                    <label className="block text-white/60 text-sm mb-2">Organisasi/Perusahaan</label>
+                    <label style={labelStyle}>Organisasi/Perusahaan</label>
                     <input type="text" className="form-input" placeholder="Nama organisasi (opsional)" value={form.organization} onChange={(e) => setForm({ ...form, organization: e.target.value })} />
                   </div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
                   <div>
-                    <label className="block text-white/60 text-sm mb-2">Jenis Pengaduan <span className="text-red-400">*</span></label>
+                    <label style={labelStyle}>Jenis Pengaduan <span style={{ color: "#EF4444" }}>*</span></label>
                     <select className="form-input" value={form.complaintType} onChange={(e) => setForm({ ...form, complaintType: e.target.value as any })}>
                       <option value="general">Umum</option>
                       <option value="certification">Sertifikasi</option>
@@ -159,7 +203,7 @@ export default function ComplaintsPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-white/60 text-sm mb-2">Preferensi Kontak</label>
+                    <label style={labelStyle}>Preferensi Kontak</label>
                     <select className="form-input" value={form.preferredContact} onChange={(e) => setForm({ ...form, preferredContact: e.target.value as any })}>
                       <option value="email">Email</option>
                       <option value="phone">Telepon</option>
@@ -167,23 +211,28 @@ export default function ComplaintsPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-white/60 text-sm mb-2">Subjek Pengaduan <span className="text-red-400">*</span></label>
+                  <label style={labelStyle}>Subjek Pengaduan <span style={{ color: "#EF4444" }}>*</span></label>
                   <input type="text" className="form-input" placeholder="Ringkasan pengaduan Anda" value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })} required />
                 </div>
                 <div>
-                  <label className="block text-white/60 text-sm mb-2">Uraian Pengaduan <span className="text-red-400">*</span></label>
-                  <textarea rows={6} className="form-input resize-none" placeholder="Jelaskan pengaduan Anda secara rinci, termasuk kronologi kejadian, pihak yang terlibat, dan dampak yang ditimbulkan..." value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} required />
+                  <label style={labelStyle}>Uraian Pengaduan <span style={{ color: "#EF4444" }}>*</span></label>
+                  <textarea rows={6} className="form-input" style={{ resize: "none" }} placeholder="Jelaskan pengaduan Anda secara rinci, termasuk kronologi kejadian, pihak yang terlibat, dan dampak yang ditimbulkan..." value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} required />
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-blue-500/5 border border-blue-500/20 rounded-lg">
-                  <AlertCircle size={16} className="text-blue-400 mt-0.5 shrink-0" />
-                  <p className="text-white/50 text-xs leading-relaxed">Dengan mengirimkan formulir ini, Anda menyatakan bahwa informasi yang disampaikan adalah benar dan dapat dipertanggungjawabkan. Data Anda akan dijaga kerahasiaannya sesuai kebijakan privasi PACER.</p>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", padding: "1rem", background: "#EFF6FF", border: "1px solid rgba(37,99,235,0.15)", borderRadius: "0.75rem" }}>
+                  <AlertCircle size={16} style={{ color: "#2563EB", marginTop: "2px", flexShrink: 0 }} />
+                  <p style={{ color: "#475569", fontSize: "0.78rem", lineHeight: 1.6 }}>Dengan mengirimkan formulir ini, Anda menyatakan bahwa informasi yang disampaikan adalah benar dan dapat dipertanggungjawabkan. Data Anda akan dijaga kerahasiaannya sesuai kebijakan privasi PACER.</p>
                 </div>
-                <button type="submit" disabled={submitMutation.isPending} className="btn-primary w-full justify-center">
-                  {submitMutation.isPending ? <span className="flex items-center gap-2"><Clock size={16} className="animate-spin" />Mengirim...</span> : "Kirim Pengaduan"}
+                <button type="submit" disabled={submitMutation.isPending} className="btn-primary" style={{ width: "100%", justifyContent: "center" }}>
+                  {submitMutation.isPending ? (
+                    <span style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                      <Clock size={16} style={{ animation: "spin 1s linear infinite" }} />Mengirim...
+                    </span>
+                  ) : "Kirim Pengaduan"}
                 </button>
               </form>
             </div>
           </div>
+
         </div>
       </div>
     </div>

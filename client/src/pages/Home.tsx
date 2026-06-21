@@ -68,41 +68,41 @@ const products = [
 ];
 
 const isoStandards = [
-  { code: "ISO 9001", name: "Quality Management", href: "/services/certification/iso9001", color: "#1D4ED8", bg: "rgba(37,99,235,0.08)", border: "rgba(37,99,235,0.20)" },
-  { code: "ISO 14001", name: "Environmental", href: "/services/certification/iso14001", color: "#065F46", bg: "rgba(16,185,129,0.08)", border: "rgba(16,185,129,0.20)" },
-  { code: "ISO 45001", name: "OH&S", href: "/services/certification/iso45001", color: "#92400E", bg: "rgba(245,158,11,0.08)", border: "rgba(245,158,11,0.20)" },
-  { code: "ISO 27001", name: "Info Security", href: "/services/certification/iso27001", color: "#4C1D95", bg: "rgba(139,92,246,0.08)", border: "rgba(139,92,246,0.20)" },
-  { code: "ISO 22000", name: "Food Safety", href: "/services/certification/iso22000", color: "#991B1B", bg: "rgba(239,68,68,0.08)", border: "rgba(239,68,68,0.20)" },
-  { code: "BNSP", name: "Nasional", href: "/services/certification/bnsp", color: "#0E7490", bg: "rgba(6,182,212,0.08)", border: "rgba(6,182,212,0.20)" },
+  { code: "ISO 9001", name: "Quality Management", href: "/services/certification/iso9001", color: "#1D4ED8", bg: "#EFF6FF", border: "rgba(37,99,235,0.20)" },
+  { code: "ISO 14001", name: "Environmental", href: "/services/certification/iso14001", color: "#065F46", bg: "#ECFDF5", border: "rgba(16,185,129,0.20)" },
+  { code: "ISO 45001", name: "OH&S", href: "/services/certification/iso45001", color: "#92400E", bg: "#FFFBEB", border: "rgba(245,158,11,0.20)" },
+  { code: "ISO 27001", name: "Info Security", href: "/services/certification/iso27001", color: "#4C1D95", bg: "#F5F3FF", border: "rgba(139,92,246,0.20)" },
+  { code: "ISO 22000", name: "Food Safety", href: "/services/certification/iso22000", color: "#991B1B", bg: "#FEF2F2", border: "rgba(239,68,68,0.20)" },
+  { code: "BNSP", name: "Nasional", href: "/services/certification/bnsp", color: "#0E7490", bg: "#ECFEFF", border: "rgba(6,182,212,0.20)" },
 ];
 
 const stats = [
-  { value: "5+", label: "Skema Sertifikasi", icon: BadgeCheck, color: "#1D4ED8" },
-  { value: "500+", label: "Profesional Tersertifikasi", icon: Users, color: "#065F46" },
-  { value: "5", label: "Metode Training", icon: Layers, color: "#92400E" },
-  { value: "KAN", label: "Terakreditasi ISO 17024", icon: Shield, color: "#4C1D95" },
+  { value: "5+", label: "Skema Sertifikasi", icon: BadgeCheck, color: "#1D4ED8", bg: "#EFF6FF" },
+  { value: "500+", label: "Profesional Tersertifikasi", icon: Users, color: "#065F46", bg: "#ECFDF5" },
+  { value: "5", label: "Metode Training", icon: Layers, color: "#92400E", bg: "#FFFBEB" },
+  { value: "KAN", label: "Terakreditasi ISO 17024", icon: Shield, color: "#4C1D95", bg: "#F5F3FF" },
 ];
 
 const whyItems = [
-  { icon: Shield, title: "KAN Terakreditasi", desc: "Akreditasi resmi dari KAN sesuai ISO/IEC 17024:2012", color: "#1D4ED8", bg: "rgba(37,99,235,0.08)", border: "rgba(37,99,235,0.15)" },
-  { icon: Globe, title: "Diakui Internasional", desc: "Sertifikat diakui global oleh industri dan lembaga internasional", color: "#065F46", bg: "rgba(16,185,129,0.08)", border: "rgba(16,185,129,0.15)" },
-  { icon: Target, title: "Berbasis Kompetensi", desc: "Penilaian berbasis bukti nyata kompetensi di tempat kerja", color: "#92400E", bg: "rgba(245,158,11,0.08)", border: "rgba(245,158,11,0.15)" },
-  { icon: Zap, title: "Proses Efisien", desc: "Proses sertifikasi yang transparan, cepat, dan mudah diikuti", color: "#4C1D95", bg: "rgba(139,92,246,0.08)", border: "rgba(139,92,246,0.15)" },
-  { icon: Users, title: "Tim Asesor Ahli", desc: "Asesor bersertifikat dengan pengalaman industri yang luas", color: "#991B1B", bg: "rgba(239,68,68,0.08)", border: "rgba(239,68,68,0.15)" },
-  { icon: BookOpen, title: "Skema Lengkap", desc: "5 skema ISO + BNSP mencakup berbagai bidang sistem manajemen", color: "#0E7490", bg: "rgba(6,182,212,0.08)", border: "rgba(6,182,212,0.15)" },
+  { icon: Shield, title: "KAN Terakreditasi", desc: "Akreditasi resmi dari KAN sesuai ISO/IEC 17024:2012", color: "#1D4ED8", bg: "#EFF6FF", border: "rgba(37,99,235,0.15)" },
+  { icon: Globe, title: "Diakui Internasional", desc: "Sertifikat diakui global oleh industri dan lembaga internasional", color: "#065F46", bg: "#ECFDF5", border: "rgba(16,185,129,0.15)" },
+  { icon: Target, title: "Berbasis Kompetensi", desc: "Penilaian berbasis bukti nyata kompetensi di tempat kerja", color: "#92400E", bg: "#FFFBEB", border: "rgba(245,158,11,0.15)" },
+  { icon: Zap, title: "Proses Efisien", desc: "Proses sertifikasi yang transparan, cepat, dan mudah diikuti", color: "#4C1D95", bg: "#F5F3FF", border: "rgba(139,92,246,0.15)" },
+  { icon: Users, title: "Tim Asesor Ahli", desc: "Asesor bersertifikat dengan pengalaman industri yang luas", color: "#991B1B", bg: "#FEF2F2", border: "rgba(239,68,68,0.15)" },
+  { icon: BookOpen, title: "Skema Lengkap", desc: "5 skema ISO + BNSP mencakup berbagai bidang sistem manajemen", color: "#0E7490", bg: "#ECFEFF", border: "rgba(6,182,212,0.15)" },
 ];
 
 const processSteps = [
-  { step: "01", label: "Pendaftaran", desc: "Isi formulir & upload dokumen persyaratan", color: "#1D4ED8", bg: "rgba(37,99,235,0.08)" },
-  { step: "02", label: "Verifikasi", desc: "Tim PACER memverifikasi kelengkapan berkas", color: "#065F46", bg: "rgba(16,185,129,0.08)" },
-  { step: "03", label: "Asesmen", desc: "Uji kompetensi tertulis & praktik lapangan", color: "#92400E", bg: "rgba(245,158,11,0.08)" },
-  { step: "04", label: "Keputusan", desc: "Komite skema menetapkan keputusan sertifikasi", color: "#4C1D95", bg: "rgba(139,92,246,0.08)" },
-  { step: "05", label: "Sertifikat", desc: "Sertifikat diterbitkan & dikirimkan", color: "#065F46", bg: "rgba(16,185,129,0.08)" },
+  { step: "01", label: "Pendaftaran", desc: "Isi formulir & upload dokumen persyaratan", color: "#1D4ED8", bg: "#EFF6FF" },
+  { step: "02", label: "Verifikasi", desc: "Tim PACER memverifikasi kelengkapan berkas", color: "#065F46", bg: "#ECFDF5" },
+  { step: "03", label: "Asesmen", desc: "Uji kompetensi tertulis & praktik lapangan", color: "#92400E", bg: "#FFFBEB" },
+  { step: "04", label: "Keputusan", desc: "Komite skema menetapkan keputusan sertifikasi", color: "#4C1D95", bg: "#F5F3FF" },
+  { step: "05", label: "Sertifikat", desc: "Sertifikat diterbitkan & dikirimkan", color: "#065F46", bg: "#ECFDF5" },
 ];
 
 export default function Home() {
   return (
-    <div style={{ background: "#F1F4F8", minHeight: "100vh", overflowX: "hidden" }}>
+    <div style={{ background: "#F8FAFF", minHeight: "100vh", overflowX: "hidden" }}>
 
       {/* HERO SECTION */}
       <section style={{
@@ -112,18 +112,19 @@ export default function Home() {
         justifyContent: "center",
         position: "relative",
         overflow: "hidden",
-        background: "linear-gradient(160deg, #E8EDF5 0%, #F1F4F8 40%, #EDF0F7 100%)",
+        background: "linear-gradient(160deg, #EFF6FF 0%, #F8FAFF 40%, #F0F7FF 100%)",
       }}>
-        {/* Grid overlay */}
+        {/* Subtle grid overlay */}
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "linear-gradient(rgba(15,37,87,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(15,37,87,0.05) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(rgba(37,99,235,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.04) 1px, transparent 1px)",
           backgroundSize: "48px 48px",
           pointerEvents: "none",
         }} />
         {/* Glow orbs */}
-        <div style={{ position: "absolute", width: "600px", height: "600px", borderRadius: "50%", background: "radial-gradient(circle, rgba(37,99,235,0.10) 0%, transparent 70%)", top: "-200px", left: "-100px", filter: "blur(80px)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", width: "400px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%)", bottom: "-100px", right: "-80px", filter: "blur(80px)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", width: "700px", height: "700px", borderRadius: "50%", background: "radial-gradient(circle, rgba(37,99,235,0.10) 0%, transparent 70%)", top: "-250px", left: "-150px", filter: "blur(80px)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", width: "500px", height: "500px", borderRadius: "50%", background: "radial-gradient(circle, rgba(245,158,11,0.10) 0%, transparent 70%)", bottom: "-100px", right: "-100px", filter: "blur(80px)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", width: "400px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.06) 0%, transparent 70%)", top: "40%", right: "15%", filter: "blur(60px)", pointerEvents: "none" }} />
 
         <div className="container" style={{ position: "relative", zIndex: 10, paddingTop: "6rem", paddingBottom: "5rem" }}>
           {/* Badge */}
@@ -131,8 +132,9 @@ export default function Home() {
             <span style={{
               display: "inline-flex", alignItems: "center", gap: "0.5rem",
               padding: "0.4rem 1.25rem", borderRadius: "100px",
-              background: "rgba(245,158,11,0.12)", border: "1px solid rgba(245,158,11,0.35)",
-              color: "#B45309", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
+              background: "rgba(245,158,11,0.10)", border: "1px solid rgba(245,158,11,0.35)",
+              color: "#92400E", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
+              boxShadow: "0 2px 12px rgba(245,158,11,0.12)",
             }}>
               <Star size={11} /> ISO/IEC 17024 · KAN Terakreditasi · BNSP
             </span>
@@ -155,7 +157,7 @@ export default function Home() {
               </span>
               <br />
               Karir{" "}
-              <span style={{ background: "linear-gradient(135deg, #1D4ED8, #2563EB)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+              <span style={{ background: "linear-gradient(135deg, #2563EB, #3B82F6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                 Tanpa Batas
               </span>
             </h1>
@@ -185,8 +187,8 @@ export default function Home() {
               <Link href="/about/story" style={{
                 display: "inline-flex", alignItems: "center", gap: "0.5rem",
                 padding: "0.9rem 2rem", borderRadius: "0.875rem",
-                background: "rgba(15,37,87,0.06)", border: "1px solid rgba(15,37,87,0.18)",
-                color: "#0F2557", fontWeight: 600, fontSize: "0.95rem",
+                background: "rgba(30,64,175,0.07)", border: "1.5px solid rgba(30,64,175,0.20)",
+                color: "#1E40AF", fontWeight: 600, fontSize: "0.95rem",
                 transition: "all 0.25s ease", textDecoration: "none",
               }}>
                 <Sparkles size={15} /> Tentang PACER
@@ -204,10 +206,10 @@ export default function Home() {
                   <div key={s.value} style={{
                     padding: "1.25rem 0.75rem",
                     borderRadius: "1rem",
-                    background: "rgba(15,37,87,0.05)",
-                    border: "1px solid rgba(15,37,87,0.12)",
+                    background: s.bg,
+                    border: `1px solid ${s.color}20`,
                     textAlign: "center",
-                    backdropFilter: "blur(10px)",
+                    boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
                   }}>
                     <Icon size={18} color={s.color} style={{ margin: "0 auto 0.5rem" }} />
                     <div style={{
@@ -231,8 +233,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ISO STANDARDS QUICK LINKS */}
+      <section style={{ padding: "3rem 0", background: "#FFFFFF", borderBottom: "1px solid rgba(37,99,235,0.08)" }}>
+        <div className="container">
+          <div style={{ display: "flex", gap: "0.875rem", justifyContent: "center", flexWrap: "wrap" }}>
+            {isoStandards.map((iso) => (
+              <Link key={iso.code} href={iso.href} style={{
+                display: "inline-flex", flexDirection: "column", alignItems: "center",
+                padding: "0.75rem 1.25rem", borderRadius: "10px",
+                background: iso.bg, border: `1px solid ${iso.border}`,
+                textDecoration: "none", transition: "all 0.2s ease",
+                minWidth: "90px",
+              }}
+                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = `0 8px 24px ${iso.color}20`; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none"; }}
+              >
+                <span style={{ fontFamily: "Montserrat, sans-serif", fontSize: "0.8rem", fontWeight: 800, color: iso.color }}>{iso.code}</span>
+                <span style={{ fontSize: "0.65rem", color: "#64748B", marginTop: "0.2rem" }}>{iso.name}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 4 PRODUCTS SECTION */}
-      <section style={{ padding: "7rem 0", background: "#F1F4F8" }}>
+      <section style={{ padding: "7rem 0", background: "#F8FAFF" }}>
         <div className="container">
           {/* Section header */}
           <div style={{ textAlign: "center", marginBottom: "4.5rem" }}>
@@ -285,75 +310,54 @@ export default function Home() {
                     backgroundImage: `radial-gradient(circle at 85% 15%, ${p.accent}20 0%, transparent 55%)`,
                     pointerEvents: "none",
                   }} />
-                  {/* Top accent line */}
-                  <div style={{
-                    position: "absolute", top: 0, left: 0, right: 0, height: "3px",
-                    background: `linear-gradient(90deg, transparent, ${p.accent}, transparent)`,
-                  }} />
-
-                  <div style={{ padding: "2.75rem", position: "relative", zIndex: 1 }}>
-                    {/* Top row: icon + number */}
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "1.75rem" }}>
-                      <div style={{
-                        width: "3.75rem", height: "3.75rem",
-                        borderRadius: "1.125rem",
-                        background: "rgba(255,255,255,0.15)",
-                        border: `1px solid rgba(255,255,255,0.25)`,
-                        display: "flex", alignItems: "center", justifyContent: "center",
-                      }}>
-                        <Icon size={30} color="white" strokeWidth={1.5} />
-                      </div>
+                  <div style={{ padding: "2rem 2rem 1.75rem", position: "relative", zIndex: 1 }}>
+                    {/* ID + Badge */}
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "1.5rem" }}>
                       <span style={{
-                        fontFamily: "Montserrat, sans-serif",
-                        fontSize: "4.5rem", fontWeight: 900,
-                        color: "rgba(255,255,255,0.08)",
-                        lineHeight: 1, userSelect: "none",
+                        fontFamily: "Montserrat, sans-serif", fontSize: "0.65rem", fontWeight: 800,
+                        color: "rgba(255,255,255,0.35)", letterSpacing: "0.12em",
                       }}>{p.id}</span>
+                      <span style={{
+                        padding: "0.25rem 0.75rem", borderRadius: "100px",
+                        background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.25)",
+                        color: "rgba(255,255,255,0.90)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.06em",
+                      }}>{p.badge}</span>
                     </div>
 
-                    {/* Badge */}
-                    <div style={{ marginBottom: "1rem" }}>
-                      <span style={{
-                        display: "inline-flex", alignItems: "center", gap: "0.3rem",
-                        padding: "0.25rem 0.75rem", borderRadius: "100px",
-                        background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.30)",
-                        color: "white", fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.06em",
-                      }}>{p.badge}</span>
+                    {/* Icon */}
+                    <div style={{
+                      width: "3.5rem", height: "3.5rem", borderRadius: "1rem",
+                      background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.20)",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      marginBottom: "1.25rem",
+                    }}>
+                      <Icon size={24} color="white" />
                     </div>
 
                     {/* Title */}
                     <h3 style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontSize: "clamp(1.4rem, 2.8vw, 1.8rem)",
-                      fontWeight: 900, color: "white",
-                      lineHeight: 1.15, marginBottom: "0.875rem",
+                      fontFamily: "Montserrat, sans-serif", fontSize: "1.2rem", fontWeight: 800,
+                      color: "white", lineHeight: 1.2, marginBottom: "0.35rem",
                     }}>{p.title}</h3>
-
-                    {/* Description */}
-                    <p style={{
-                      color: "rgba(255,255,255,0.70)",
-                      fontSize: "0.875rem", lineHeight: 1.65,
-                      marginBottom: "1.75rem",
-                    }}>{p.description}</p>
+                    <p style={{ color: p.accent, fontSize: "0.75rem", fontWeight: 600, marginBottom: "0.875rem", letterSpacing: "0.04em" }}>{p.subtitle}</p>
+                    <p style={{ color: "rgba(255,255,255,0.72)", fontSize: "0.875rem", lineHeight: 1.6, marginBottom: "1.5rem" }}>{p.description}</p>
 
                     {/* Features */}
-                    <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "2rem" }}>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", marginBottom: "1.75rem" }}>
                       {p.features.map((f) => (
                         <div key={f} style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                          <CheckCircle size={14} color={p.accent} />
-                          <span style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.82rem", fontWeight: 500 }}>{f}</span>
+                          <CheckCircle size={13} color={p.accent} />
+                          <span style={{ color: "rgba(255,255,255,0.80)", fontSize: "0.78rem" }}>{f}</span>
                         </div>
                       ))}
                     </div>
 
                     {/* CTA */}
                     <div style={{
-                      display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                      padding: "0.625rem 1.25rem", borderRadius: "0.75rem",
-                      background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.30)",
-                      color: "white", fontWeight: 700, fontSize: "0.82rem",
+                      display: "inline-flex", alignItems: "center", gap: "0.4rem",
+                      color: p.accent, fontSize: "0.82rem", fontWeight: 700,
                     }}>
-                      Pelajari Lebih <ChevronRight size={15} />
+                      Pelajari Lebih Lanjut <ChevronRight size={14} />
                     </div>
                   </div>
                 </Link>
@@ -363,143 +367,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ISO STANDARDS SECTION */}
-      <section style={{
-        padding: "3.5rem 0",
-        background: "white",
-        borderTop: "1px solid rgba(0,0,0,0.06)",
-        borderBottom: "1px solid rgba(0,0,0,0.06)",
-      }}>
+      {/* WHY PACER */}
+      <section style={{ padding: "7rem 0", background: "#FFFFFF" }}>
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-            <span style={{
-              display: "inline-flex", alignItems: "center", gap: "0.4rem",
-              padding: "0.3rem 0.875rem", borderRadius: "100px",
-              background: "rgba(37,99,235,0.08)", border: "1px solid rgba(37,99,235,0.20)",
-              color: "#1D4ED8", fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
-            }}>
-              <Shield size={11} /> Skema Sertifikasi KAN & BNSP
-            </span>
-          </div>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-            {isoStandards.map((iso) => (
-              <Link key={iso.code} href={iso.href} style={{
-                display: "flex", alignItems: "center", gap: "0.75rem",
-                padding: "0.875rem 1.5rem", borderRadius: "0.875rem",
-                background: iso.bg, border: `1px solid ${iso.border}`,
-                textDecoration: "none", transition: "all 0.3s ease",
-                minWidth: "160px",
-              }}>
-                <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: iso.color }} />
-                <div>
-                  <div style={{ fontSize: "0.9rem", fontWeight: 900, color: iso.color, fontFamily: "Montserrat, sans-serif" }}>{iso.code}</div>
-                  <div style={{ fontSize: "0.68rem", color: "#64748B", marginTop: "0.1rem" }}>{iso.name}</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* WHY PACER SECTION */}
-      <section style={{ padding: "7rem 0", background: "#F1F4F8" }}>
-        <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
-            {/* Left */}
-            <div>
-              <span style={{
-                display: "inline-flex", alignItems: "center", gap: "0.4rem",
-                padding: "0.35rem 1rem", borderRadius: "100px",
-                background: "rgba(37,99,235,0.08)", border: "1px solid rgba(37,99,235,0.20)",
-                color: "#1D4ED8", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
-                marginBottom: "1.5rem",
-              }}>
-                <Star size={11} /> Mengapa PACER?
-              </span>
-              <h2 style={{
-                fontFamily: "Montserrat, sans-serif",
-                fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
-                fontWeight: 900, color: "#0F2557",
-                lineHeight: 1.2, marginBottom: "1.5rem",
-                letterSpacing: "-0.02em",
-              }}>
-                Standar{" "}
-                <span style={{ background: "linear-gradient(135deg, #F59E0B, #D97706)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                  Terbaik
-                </span>
-                <br />untuk Karir Anda
-              </h2>
-              <p style={{ color: "#475569", lineHeight: 1.8, fontSize: "0.95rem", marginBottom: "2rem" }}>
-                PT. Sertifikasi Karir Profesional (PACER) adalah Lembaga Sertifikasi Profesi yang didirikan berdasarkan kepedulian terhadap profesionalisme auditor sistem manajemen di Indonesia. Beroperasi sesuai standar SNI ISO/IEC 17024:2012.
-              </p>
-              {/* PACER acronym */}
-              <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
-                {[
-                  { word: "Professional", color: "#1D4ED8", bg: "rgba(37,99,235,0.08)", border: "rgba(37,99,235,0.20)" },
-                  { word: "Active", color: "#065F46", bg: "rgba(16,185,129,0.08)", border: "rgba(16,185,129,0.20)" },
-                  { word: "Care", color: "#92400E", bg: "rgba(245,158,11,0.08)", border: "rgba(245,158,11,0.20)" },
-                  { word: "Effective", color: "#4C1D95", bg: "rgba(139,92,246,0.08)", border: "rgba(139,92,246,0.20)" },
-                  { word: "Reliable", color: "#991B1B", bg: "rgba(239,68,68,0.08)", border: "rgba(239,68,68,0.20)" },
-                ].map((item) => (
-                  <div key={item.word} style={{
-                    padding: "0.4rem 1rem", borderRadius: "100px",
-                    background: item.bg, border: `1px solid ${item.border}`,
-                    color: item.color, fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.03em",
-                  }}>{item.word}</div>
-                ))}
-              </div>
-              <Link href="/about/story" style={{
-                display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                padding: "0.8rem 1.75rem", borderRadius: "0.875rem",
-                background: "linear-gradient(135deg, #1B3A6B 0%, #2563EB 100%)",
-                color: "white", fontWeight: 700, fontSize: "0.9rem",
-                textDecoration: "none", boxShadow: "0 4px 20px rgba(37,99,235,0.30)",
-              }}>
-                Tentang Kami <ArrowRight size={16} />
-              </Link>
-            </div>
-
-            {/* Right: 2x3 grid of why cards */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-              {whyItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.title} style={{
-                    padding: "1.5rem",
-                    borderRadius: "1.125rem",
-                    background: "white",
-                    border: `1px solid ${item.border}`,
-                    boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-                    transition: "all 0.3s ease",
-                  }}>
-                    <div style={{
-                      width: "2.5rem", height: "2.5rem",
-                      borderRadius: "0.75rem",
-                      background: item.bg,
-                      border: `1px solid ${item.border}`,
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      marginBottom: "0.875rem",
-                    }}>
-                      <Icon size={17} color={item.color} />
-                    </div>
-                    <h4 style={{ color: "#0F2557", fontWeight: 700, fontSize: "0.85rem", marginBottom: "0.35rem" }}>{item.title}</h4>
-                    <p style={{ color: "#64748B", fontSize: "0.73rem", lineHeight: 1.5 }}>{item.desc}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROCESS STEPS */}
-      <section style={{ padding: "6rem 0", background: "white" }}>
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "4.5rem" }}>
+          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <span style={{
               display: "inline-flex", alignItems: "center", gap: "0.4rem",
               padding: "0.35rem 1rem", borderRadius: "100px",
-              background: "rgba(16,185,129,0.08)", border: "1px solid rgba(16,185,129,0.20)",
+              background: "#EFF6FF", border: "1px solid rgba(37,99,235,0.20)",
+              color: "#1E40AF", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
+              marginBottom: "1.25rem",
+            }}>
+              <Shield size={11} /> Mengapa Memilih PACER
+            </span>
+            <h2 style={{
+              fontFamily: "Montserrat, sans-serif",
+              fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
+              fontWeight: 900, color: "#0F2557",
+              lineHeight: 1.2, marginTop: "0.75rem",
+              letterSpacing: "-0.02em",
+            }}>
+              Keunggulan yang{" "}
+              <span style={{ background: "linear-gradient(135deg, #2563EB, #3B82F6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Membedakan</span>
+              {" "}Kami
+            </h2>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem", maxWidth: "960px", margin: "0 auto" }}>
+            {whyItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} style={{
+                  padding: "1.75rem",
+                  borderRadius: "1rem",
+                  background: item.bg,
+                  border: `1px solid ${item.border}`,
+                  transition: "all 0.25s ease",
+                }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = `0 12px 32px ${item.color}18`; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
+                >
+                  <div style={{
+                    width: "2.75rem", height: "2.75rem", borderRadius: "0.75rem",
+                    background: "white", border: `1px solid ${item.border}`,
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    marginBottom: "1rem",
+                    boxShadow: `0 2px 8px ${item.color}15`,
+                  }}>
+                    <Icon size={18} color={item.color} />
+                  </div>
+                  <h4 style={{ fontFamily: "Montserrat, sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#0F2557", marginBottom: "0.5rem" }}>{item.title}</h4>
+                  <p style={{ color: "#64748B", fontSize: "0.82rem", lineHeight: 1.6 }}>{item.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS SECTION */}
+      <section style={{ padding: "7rem 0", background: "#F8FAFF" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+            <span style={{
+              display: "inline-flex", alignItems: "center", gap: "0.4rem",
+              padding: "0.35rem 1rem", borderRadius: "100px",
+              background: "#ECFDF5", border: "1px solid rgba(16,185,129,0.20)",
               color: "#065F46", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase",
               marginBottom: "1.25rem",
             }}>
@@ -523,7 +456,7 @@ export default function Home() {
             <div style={{
               position: "absolute", top: "2.75rem", left: "10%", right: "10%", height: "2px",
               background: "linear-gradient(90deg, #2563EB, #10B981, #F59E0B, #8B5CF6, #10B981)",
-              zIndex: 0, opacity: 0.3,
+              zIndex: 0, opacity: 0.25,
             }} />
             {processSteps.map((item) => (
               <div key={item.step} style={{ textAlign: "center", position: "relative", zIndex: 1, padding: "0 0.25rem" }}>
@@ -561,7 +494,7 @@ export default function Home() {
       </section>
 
       {/* CTA BANNER */}
-      <section style={{ padding: "5rem 0", background: "#F1F4F8" }}>
+      <section style={{ padding: "5rem 0", background: "#F8FAFF" }}>
         <div className="container">
           <div style={{
             borderRadius: "2rem",
@@ -574,7 +507,8 @@ export default function Home() {
             boxShadow: "0 20px 80px rgba(37,99,235,0.20)",
           }}>
             <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)", backgroundSize: "28px 28px", pointerEvents: "none" }} />
-            <div style={{ position: "absolute", width: "400px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle, rgba(245,158,11,0.15) 0%, transparent 70%)", top: "-150px", right: "-80px", filter: "blur(60px)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", width: "400px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle, rgba(245,158,11,0.18) 0%, transparent 70%)", top: "-150px", right: "-80px", filter: "blur(60px)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", width: "300px", height: "300px", borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%)", bottom: "-100px", left: "-60px", filter: "blur(60px)", pointerEvents: "none" }} />
 
             <div style={{ position: "relative", zIndex: 1 }}>
               <span style={{
@@ -627,7 +561,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT STRIP */}
-      <section style={{ padding: "2.5rem 0", background: "white", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
+      <section style={{ padding: "2.5rem 0", background: "white", borderTop: "1px solid rgba(37,99,235,0.08)" }}>
         <div className="container">
           <div style={{ display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
             {[
